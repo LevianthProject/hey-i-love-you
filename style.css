@@ -1,0 +1,219 @@
+* { 
+  font-family: 'Amatic SC', cursive !important;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    background-color: #FFDDD2;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration:none;
+    color: inherit;
+}
+
+@media screen and (max-width: 480px) {
+    .main-pages {
+      position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .quotes-div {
+        padding: 20px;
+        margin: 1em;
+        width: 80%;
+        background-color: #FFB9B9;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .heading {
+        text-align: center;
+        padding: 10px;
+        margin: 1em;
+        font-weight: 700;
+    }
+    .heading h1 {
+        font-size:70px;
+    }
+
+    .heading h2 {
+        font-size: 50px;
+        margin: 0.5em;
+    }
+    .heading h3 {
+        font-size: 20px;
+    }
+
+    .Dylme {
+        margin: 0 0 .5em 0;
+        font-size: 25px;
+    } 
+
+    .galleries h3 {
+      margin: 1em 1em 1.5em;
+      font-size: 25px;
+      text-align: center;
+      border: .12em #FD8A8A;
+      border-style: dashed;
+      padding: .3em;
+    }
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.grid-wrapper {
+  position: relative;
+  margin: 1em .5em;
+  box-sizing: content-box;
+}
+
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+.grid-wrapper .wide {
+	grid-column: span 2;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+
+
+.buttons-ysno {
+    display: flex;
+    margin: 1em;
+    width: 295px;
+    gap: 10px;
+    --b: 5px;   /* the border thickness */
+    --h: 1.5em; /* the height */
+   }
+  
+  .buttons-ysno button {
+    font-family: 'Amatic SC', cursive !important;
+    --_c: #86C8BC;
+    flex: calc(1.25 + var(--_s,0));
+    min-width: 0;
+    font-size: 40px;
+    font-weight: bold;
+    height: var(--h);
+    cursor: pointer;
+    color: var(--_c);
+    border: var(--b) solid var(--_c);
+    background: 
+      conic-gradient(at calc(100% - 1.3*var(--b)) 0,var(--_c) 209deg, #0000 211deg) 
+      border-box;
+    clip-path: polygon(0 0,100% 0,calc(100% - 0.577*var(--h)) 100%,0 100%);
+    padding: 0 calc(0.288*var(--h)) 0 0;
+    margin: 0 calc(-0.288*var(--h)) 0 0;
+    box-sizing: border-box;
+    transition: flex .4s;
+  }
+  .buttons-ysno button + button {
+    --_c: #FD8A8A;
+    flex: calc(.75 + var(--_s,0));
+    background: 
+      conic-gradient(from -90deg at calc(1.3*var(--b)) 100%,var(--_c) 119deg, #0000 121deg) 
+      border-box;
+    clip-path: polygon(calc(0.577*var(--h)) 0,100% 0,100% 100%,0 100%);
+    margin: 0 0 0 calc(-0.288*var(--h));
+    padding: 0 0 0 calc(0.288*var(--h));
+  }
+  .buttons-ysno button:focus-visible {
+    outline-offset: calc(-2*var(--b));
+    outline: calc(var(--b)/2) solid #000;
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  .buttons-ysno button:focus-visible + button {
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  .buttons-ysno button:has(+ button:focus-visible) {
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  button:hover,
+  button:active:not(:focus-visible) {
+    --_s: .75;
+  }
+  button:active {
+    box-shadow: inset 0 0 0 100vmax var(--_c);
+    color: #fff;
+  }
+  
+  
+  
